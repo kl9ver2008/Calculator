@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Calculator
 {
@@ -10,10 +10,10 @@ namespace Calculator
             string a;
             string b;
             string k;
-                a = GetData("Input num1");
-                k = Sign("Sign");
-                b = GetData("Input num2");
-                double resultm = Solution.Minus(k,a, b, out string msgm);
+                a = GetData("Schreibst num1");
+                k = Sign("Zeichen");
+                b = GetData("Schreibst num2");
+                double resultm = Solution.Work(k,a, b, out string msgm);
                 Console.WriteLine($"{msgm} {resultm}"); 
         }
 
