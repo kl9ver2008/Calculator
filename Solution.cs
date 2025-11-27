@@ -1,40 +1,48 @@
-﻿using System;
+using System;
+using System.Runtime.Remoting.Messaging;
+using System.Security.Policy;
 
 namespace Calculator
 {
     internal class Solution
     {
-        public static double Minus(string k, string a, string b, out string exMessage)
+        public static double Work (string k, string a, string b, out string exMessage)
         {
             double a1 = CheckData.CheckDataToDouble(a, out exMessage);
             double b1 = CheckData.CheckDataToDouble(b, out exMessage);
+            string sm1 = Convert.ToString(k);
             
-            if (k == "-")
+
+            if (a1 == 0 || b1 == 0)
             {
-                return a1 - b1;
-            }
-            else if (k == "+")
-            {
-                return a1 + b1;
-            }
-            else if (k == "*")
-            {
-                return a1 * b1;
-            }
-            else if (k == "/")
-            {
-                return a1 / b1;
-            }
-            else 
-            {
-                exMessage = "Unknown operation";
+                exMessage = "Geben Sie die Nummer richtig ein";
                 return 0;
             }
+            if (sm1.Length > 1)
+            {
+                exMessage = "Geben Sie das Zeichen richtig ein";
+                return 0;
+            }
+            else
+            {
+                char sm2 = Convert.ToChar(k);
 
-
-
+                switch (sm2)
+                {
+                    case '+':
+                        return a1 + b1;
+                    case '-':
+                        return a1 - b1;
+                    case '*':
+                        return a1 * b1;
+                    case '/':
+                        return a1 / b1;
+                    default:
+                        exMessage = "Geben Sie das Zeichen richtig ein";
+                        break;
+                }
+                 return 0;
+            }
         }
-
-
     }
 }
