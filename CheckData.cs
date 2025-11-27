@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+
 
 namespace Calculator
 {
@@ -8,7 +9,7 @@ namespace Calculator
         {
             try
             {
-                message = "Your result is: ";
+                message = "Ihr Ergebnis ist: ";
                 return double.Parse(num1);
             }
             catch (Exception ex)
