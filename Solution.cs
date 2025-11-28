@@ -14,12 +14,12 @@ namespace Calculator
 
             if (a1 == 0 || b1 == 0)
             {
-                exMessage = "Geben Sie die Nummer richtig ein";
+                exMessage = "Kaputt!Geben Sie die Nummer richtig ein";
                 return 0;
             }
             if (sm1.Length > 1)
             {
-                exMessage = "Geben Sie das Zeichen richtig ein";
+                exMessage = "Kaputt!Geben Sie das Zeichen richtig ein";
                 return 0;
             }
             else
@@ -37,7 +37,7 @@ namespace Calculator
                     case '/':
                         return a1 / b1;
                     default:
-                        exMessage = "Geben Sie das Zeichen richtig ein";
+                        exMessage = "Kaputt!Geben Sie das Zeichen richtig ein";
                         break;
                 }
                  return 0;
