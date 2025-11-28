@@ -12,7 +12,7 @@ namespace Calculator
             string sm1 = Convert.ToString(k);
             
 
-            if (a1 == 0 || b1 == 0)
+            if (b1 == 0)
             {
                 exMessage = "Kaputt!Geben Sie die Nummer richtig ein";
                 return 0;
